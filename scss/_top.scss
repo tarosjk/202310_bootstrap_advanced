@@ -1,0 +1,31 @@
+@use "./override" as *;
+
+.showcase {
+  background: url(../img/space_mountain.jpg) no-repeat center bottom;
+  background-size: cover;
+  position: relative;
+  isolation: isolate;
+  padding-top: 120px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    // width: 100%;
+    // height: 100%;
+    // top: 0;
+    // left: 0;
+    inset: 0; //top,left,right,bottom を0
+    background-color: rgba($primary, 0.5);
+    z-index: -1;
+  }
+
+  &-cover {
+    max-width: 300px;
+  }
+
+  @include media-breakpoint-down(md) {
+    &-title {
+      font-size: 2.3rem;
+    }
+  }
+} //.showcase
