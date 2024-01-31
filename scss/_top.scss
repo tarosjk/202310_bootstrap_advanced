@@ -46,3 +46,15 @@
     }
   }
 }
+
+.author {
+  &-sns {
+    i {
+      font-size: 1.2rem;
+    }
+  }
+
+  &-card {
+    height: 100%;
+  }
+}
